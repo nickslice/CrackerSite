@@ -217,12 +217,12 @@ body.lock {
 }
 
 .wrapper__details {
+  display: none;
   width: 780px;
   height: auto;
   margin: 21.5px 0px 0px 0px;
   padding: 18px 27px 21px 98px;
   position: absolute;
-  display: none;
   right: 0;
   background-color: #f4f4f4;
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.22), 0px 24px 24px 0 rgba(0, 0, 0, 0.3);
