@@ -46,11 +46,11 @@ fourth.oninput = function() {
 // console.log(fourth.value);
 // ==================================================
 const detailsBtn = document.querySelector('.details__btn');
-const detailsMenu = document.querySelector('.details__menu');
+const detailsMenu = document.querySelector('.wrapper__details');
 const close = document.querySelector('.close');
 
-detailsBtn.addEventListener('mouseover', () => {
-	detailsMenu.classList.add('details--active');
+detailsBtn.addEventListener('click', () => {
+	detailsMenu.classList.toggle('details--active');
 });
 close.addEventListener('click', () => {
 	detailsMenu.classList.remove('details--active');
