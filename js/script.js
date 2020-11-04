@@ -83,6 +83,78 @@ pacageCart.addEventListener('mouseover', () => {
 pacageCartoval.addEventListener('mouseout', () => {
 	pacageCartoval.classList.remove('cartoval__active');
 });
+
+
+const ul = document.querySelector('.items');
+
+pacageCartoval.addEventListener('click', () => {
+	let li = document.createElement('li');
+	li.className = 'details__item';
+	li.innerHTML = '<span class="weight">1.50kg</span><span class="price">81.50€</span><button onclick="deleteSelf(this)" class="delete"><img class="delete__image" src="img/details/x.svg" alt=""></button>';
+	li.id = 'newLi';
+	ul.append(li);
+
+	let ingFirst = document.createElement('span');
+	ingFirst.className = 'ing first--ing';
+	li.prepend(ingFirst);
+	let ingSecond = document.createElement('span');
+	ingSecond.className = 'ing second--ing';
+	li.prepend(ingSecond);
+
+	let ingThird = document.createElement('span');
+	ingThird.className = 'ing third--ing';
+	li.prepend(ingThird);
+
+	let ingFourth = document.createElement('span');
+	ingFourth.className = 'ing fourth--ing';
+	li.prepend(ingFourth);
+
+
+	const img = document.createElement('img');
+	img.setAttribute('src', 'img/details/semen2.png');
+	li.prepend(img);
+
+	li.insertBefore(ingFirst, img.nextSibling);
+	li.insertBefore(ingSecond, ingFirst.nextSibling);
+	li.insertBefore(ingThird, ingFourth);
+	ingFirst.innerHTML = '';
+	ingFirst.innerHTML += output.innerHTML + '%';
+
+	ingSecond.innerHTML = '';
+	ingSecond.innerHTML += output2.innerHTML + '%';
+	
+	
+	ingThird.innerHTML = '';
+	ingThird.innerHTML += output3.innerHTML + '%';
+	
+	
+	ingFourth.innerHTML = '';
+	ingFourth.innerHTML += output4.innerHTML + '%';
+	
+	
+});
+// deleting products from cart
+const deleteProduct = document.querySelector('.delete');
+// let el = document.getElementById('newLi');
+
+// let parent = document.querySelector('.items');
+let newList = document.querySelectorAll('.items li');
+const deleting = document.getElementById('newLi');
+
+// deleteProduct.addEventListener('click', () => {
+// 	for (var i = 0; i < newList.length; i++) {
+// 	  newList[i].remove();
+// 	};
+// }); ------ удалить все продукты(очистить корзину)
+function deleteSelf(deleteProduct) {
+    deleteProduct.parentNode.remove();
+}
+console.log(newList);
+console.log(deleteProduct);
+// deleteProduct.addEventListener('click', () => {
+// 	parent.removeChild(newLi);
+// }); ------> удаляет только первый элемент ( нужно как-то через querySelectorAll)
+
 // ==================================================
 const iconMenu = document.querySelector('.icon-menu');
 const menuBody = document.querySelector('.menu__body');
