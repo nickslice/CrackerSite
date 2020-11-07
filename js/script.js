@@ -117,8 +117,6 @@ const deleting = document.getElementById('newLi');
 function deleteSelf(deleteProduct) {
     deleteProduct.parentNode.remove();
 }
-console.log(newList);
-console.log(deleteProduct);
 // ==================================================
 const iconMenu = document.querySelector('.icon-menu');
 const menuBody = document.querySelector('.menu__body');
