@@ -22,28 +22,6 @@ output4.innerHTML = fourth.value;
 fourth.oninput = function() {
   output4.innerHTML = this.value;
 };
-
-// const sliders = document.querySelectorAll('#first');
-// const one = parseInt(first.value);
-// const two = parseInt(second.value);
-// const three = parseInt(third.value);
-// const four = parseInt(fourth.value);
-// let sum =  one + two + three + four;
-// sliders.forEach(function(elem) {
-// 	elem.addEventListener('oninput', function (event) {
-//     console.log(sliders.value);
-//   });
-// });
-// $( "input[type='range']" ).change(function() {
-   
-// });
-
-// 	if (sum > 100){
-	
-// 	console.log(fourth);
-// };
-
-// console.log(fourth.value);
 // ==================================================
 const detailsBtn = document.querySelector('.details__btn');
 const detailsMenu = document.querySelector('.wrapper__details');
@@ -86,7 +64,6 @@ pacageCartoval.addEventListener('mouseout', () => {
 
 
 const ul = document.querySelector('.items');
-
 pacageCartoval.addEventListener('click', () => {
 	let li = document.createElement('li');
 	li.className = 'details__item';
@@ -135,26 +112,13 @@ pacageCartoval.addEventListener('click', () => {
 });
 // deleting products from cart
 const deleteProduct = document.querySelector('.delete');
-// let el = document.getElementById('newLi');
-
-// let parent = document.querySelector('.items');
 let newList = document.querySelectorAll('.items li');
 const deleting = document.getElementById('newLi');
-
-// deleteProduct.addEventListener('click', () => {
-// 	for (var i = 0; i < newList.length; i++) {
-// 	  newList[i].remove();
-// 	};
-// }); ------ удалить все продукты(очистить корзину)
 function deleteSelf(deleteProduct) {
     deleteProduct.parentNode.remove();
 }
 console.log(newList);
 console.log(deleteProduct);
-// deleteProduct.addEventListener('click', () => {
-// 	parent.removeChild(newLi);
-// }); ------> удаляет только первый элемент ( нужно как-то через querySelectorAll)
-
 // ==================================================
 const iconMenu = document.querySelector('.icon-menu');
 const menuBody = document.querySelector('.menu__body');
@@ -164,8 +128,3 @@ iconMenu.addEventListener('click', () => {
 	menuBody.classList.toggle('active');
 	body.classList.toggle('lock');
 });
-// $('.icon-menu').click(function(event) {
-// 	$(this).toggleClass('active');
-// 	$('.menu__body').toggleClass('active');
-// 	$('body').toggleClass('lock');
-// });
